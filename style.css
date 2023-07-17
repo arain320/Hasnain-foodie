@@ -1,17 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 :root {
   --orange: #f95f1d;
 }
 
 * {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-transform: capitalize;
   text-decoration: none;
   transition: all 0.3s linear;
+  line-height: 1.5;
 }
 
 *::selection {
@@ -39,14 +40,20 @@ html {
 .btn:hover {
   border-radius: 3rem;
 }
-
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Ubuntu", sans-serif !important;
+}
 .heading {
   width: 100%;
   text-align: center;
 }
 
 .heading span {
-  font-size: 2rem;
+  font-size: 4rem;
+  font-weight: 600;
   padding: 1rem 6rem;
   color: #fff;
   background: var(--orange);
@@ -73,6 +80,11 @@ html {
     border-bottom-right-radius: 0rem;
     border-bottom-left-radius: 0rem;
   }
+}
+
+.common__section {
+  margin: 2rem auto;
+  padding: 1rem;
 }
 .nav-toggle {
   transform: translateX(-30rem);
@@ -135,8 +147,13 @@ header .navbar ul li a:hover {
 .fa-times {
   transform: rotate(180deg) skew(-180deg);
 }
+
+.home {
+  width: 100%;
+}
 .home .home-slider .item {
   position: relative;
+  width: 100%;
 }
 
 .home .home-slider .item img {
@@ -148,8 +165,12 @@ header .navbar ul li a:hover {
 .home .home-slider .item .content {
   position: absolute;
   top: 50%;
-  left: 5%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(500px, 80%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .home .home-slider .item .content h3 {
@@ -187,6 +208,7 @@ header .navbar ul li a:hover {
   color: #fff;
   font-size: 7rem;
 }
+
 .b-feature {
   background-color: #fff;
 }
@@ -235,7 +257,7 @@ header .navbar ul li a:hover {
 }
 
 .b-feature .card-container .card .info p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #eee;
 }
 .b-feature .card-container .card .info .bf-price span {
@@ -247,6 +269,7 @@ header .navbar ul li a:hover {
   box-shadow: none;
   margin-top: 1rem;
 }
+
 .arrival {
   min-height: 100vh;
   padding-top: 2rem;
@@ -305,7 +328,7 @@ header .navbar ul li a:hover {
 
 .arrival .box-container .box .info .subInfo .price span {
   color: #666;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-decoration: line-through;
 }
 
@@ -432,11 +455,12 @@ header .navbar ul li a:hover {
 .feature .row .content .price span {
   color: #666;
   text-decoration: line-through;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .feature .row .content .btn {
-  margin-left: 2rem;
+  margin-top: 2rem;
+  display: block;
 }
 
 .gallery {
@@ -599,7 +623,7 @@ header .navbar ul li a:hover {
 }
 .deal .icons-container .icons p {
   color: #666;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   padding: 1rem 0;
 }
 .deal .icons-container .icons:hover p {
@@ -652,8 +676,9 @@ header .navbar ul li a:hover {
 
 .review .box-container .box p {
   color: #666;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   padding: 2rem 0;
+  text-align: justify;
 }
 
 .review .box-container .box img {
@@ -933,6 +958,21 @@ header .navbar ul li a:hover {
   }
 }
 
+@media (max-width: 500px) {
+  .gallery .image-container .box {
+    height: 20rem;
+    width: 20rem;
+  }
+  .gallery .image-container .box .number {
+    position: absolute;
+    top: 0.2rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    color: var(--orange);
+    font-weight: bold;
+    z-index: 10;
+  }
+}
 @media (max-width: 400px) {
   html {
     font-size: 45%;
